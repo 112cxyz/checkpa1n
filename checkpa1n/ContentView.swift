@@ -55,9 +55,11 @@ struct ContentView: View {
                         .edgesIgnoringSafeArea(.all)
                         .listStyle(GroupedListStyle())
                     List{
+                        
                         Button(action:{
                             showingAlert = true
                         }, label:{Text("Restore System").foregroundColor(Color.red)})
+                        
                     }.frame( maxWidth: .infinity)
                         .edgesIgnoringSafeArea(.all)
                         .listStyle(GroupedListStyle())
@@ -78,7 +80,8 @@ struct ContentView: View {
                 }
                 
             }
-        }
+        }.navigationViewStyle(.stack)
+        .navigationBarBackButtonHidden(true)
     }
     
     func respring() {
@@ -115,6 +118,7 @@ struct View2: View {
         }.navigationBarTitle("")
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
+        .navigationViewStyle(.stack)
     }
     
 }
@@ -132,6 +136,7 @@ struct View3: View {
         }.navigationBarTitle("")
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
+            .navigationViewStyle(.stack)
     }
     
     func respring() {
